@@ -1,11 +1,8 @@
 package com.example.myapplication
 
-import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import com.google.android.material.button.MaterialButton
 
@@ -17,9 +14,104 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val ce : MaterialButton = findViewById(R.id.clearEntry)
+        ce.setOnClickListener {
+            entryClearAction()
+        }
+
+        val c : MaterialButton = findViewById(R.id.clearFormula)
+        c.setOnClickListener {
+            allClearAction()
+        }
+
+        val bs : MaterialButton = findViewById(R.id.backspace)
+        bs.setOnClickListener {
+            backSpaceAction()
+        }
+
+        val dv : MaterialButton = findViewById(R.id.devide)
+        dv.setOnClickListener {
+            operationAction(dv)
+        }
+
+        val mul : MaterialButton = findViewById(R.id.multiply)
+        mul.setOnClickListener {
+            operationAction(mul)
+        }
+
+        val pls : MaterialButton = findViewById(R.id.plus)
+        pls.setOnClickListener {
+            operationAction(pls)
+        }
+
+        val mns : MaterialButton = findViewById(R.id.minus)
+        mns.setOnClickListener {
+            operationAction(mns)
+        }
+
+        val nZero : MaterialButton = findViewById(R.id.zero)
+        nZero.setOnClickListener {
+            numberAction(nZero)
+        }
+
+        val nOne : MaterialButton = findViewById(R.id.one)
+        nOne.setOnClickListener {
+            numberAction(nOne)
+        }
+
+        val nTwo : MaterialButton = findViewById(R.id.two)
+        nTwo.setOnClickListener {
+            numberAction(nTwo)
+        }
+
+        val nThree : MaterialButton = findViewById(R.id.three)
+        nThree.setOnClickListener {
+            numberAction(nThree)
+        }
+
+        val nFour : MaterialButton = findViewById(R.id.four)
+        nFour.setOnClickListener {
+            numberAction(nFour)
+        }
+
+        val nFive : MaterialButton = findViewById(R.id.five)
+        nFive.setOnClickListener {
+            numberAction(nFive)
+        }
+
+        val nSix : MaterialButton = findViewById(R.id.six)
+        nSix.setOnClickListener {
+            numberAction(nSix)
+        }
+
+        val nSeven : MaterialButton = findViewById(R.id.seven)
+        nSeven.setOnClickListener {
+            numberAction(nSeven)
+        }
+
+        val nEight : MaterialButton = findViewById(R.id.eight)
+        nEight.setOnClickListener {
+            numberAction(nEight)
+        }
+
+        val nNine : MaterialButton = findViewById(R.id.nine)
+        nNine.setOnClickListener {
+            numberAction(nNine)
+        }
+
+        val dot : MaterialButton = findViewById(R.id.dot)
+        dot.setOnClickListener {
+            numberAction(dot)
+        }
+
+        val equals : MaterialButton = findViewById(R.id.equals)
+        equals.setOnClickListener {
+            equalsAction()
+        }
     }
 
-    fun numberAction(view: View) {
+    private fun numberAction(view: View) {
         val formula: TextView = findViewById(R.id.tvFormula)
 
         if (view is MaterialButton) {
@@ -34,7 +126,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun operationAction(view: View) {
+    private fun operationAction(view: View) {
         val formula: TextView = findViewById(R.id.tvFormula)
 
         if (view is MaterialButton && canAddOperation) {
@@ -44,13 +136,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun entryClearAction(view: View) {
+    private fun entryClearAction() {
         val result: TextView = findViewById(R.id.tvResult)
 
         result.text = "0"
     }
 
-    fun allClearAction(view: View) {
+    private fun allClearAction() {
         val formula: TextView = findViewById(R.id.tvFormula)
         val result: TextView = findViewById(R.id.tvResult)
 
@@ -58,16 +150,16 @@ class MainActivity : AppCompatActivity() {
         result.text = "0"
     }
 
-    fun backSpaceAction(view: View) {
+    private fun backSpaceAction() {
         val formula: TextView = findViewById(R.id.tvFormula)
-        val length = formula.length();
+        val length = formula.length()
 
         if (length > 0) {
             formula.text = formula.text.subSequence(0, length - 1)
         }
     }
 
-    fun equalsAction(view: View) {
+    private fun equalsAction() {
         val result: TextView = findViewById(R.id.tvResult)
 
         result.text = calculateResults()
@@ -144,10 +236,10 @@ class MainActivity : AppCompatActivity() {
     private fun digitOperators() : MutableList<Any> {
         val formula: TextView = findViewById(R.id.tvFormula)
         val list = mutableListOf<Any>()
-        var currentDigit = "";
+        var currentDigit = ""
 
         for (character in formula.text) {
-            if (character.isDigit() || character.equals(".")) currentDigit += character
+            if (character.isDigit() || character == '.') currentDigit += character
             else {
                 list.add(currentDigit)
                 currentDigit = ""

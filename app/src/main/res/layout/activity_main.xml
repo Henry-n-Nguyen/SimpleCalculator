@@ -59,14 +59,12 @@
             android:text="@string/ce"
             android:textColor="@color/black"
             android:textSize="25sp"
-            app:cornerRadius="15dp"
-
-            android:onClick="entryClearAction"/>
+            app:cornerRadius="15dp"/>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/clearFormula"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:id="@+id/clearFormula"
             android:layout_rowWeight="1"
             android:layout_columnSpan="1"
             android:layout_columnWeight="1"
@@ -75,14 +73,12 @@
             android:backgroundTint="#C8C8C8"
             android:text="@string/c"
             android:textSize="25sp"
-            app:cornerRadius="15dp"
-
-            android:onClick="allClearAction"/>
+            app:cornerRadius="15dp"/>
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/backspace"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:id="@+id/backspace"
             android:layout_rowWeight="1"
             android:layout_columnSpan="1"
             android:layout_columnWeight="1"
@@ -91,9 +87,7 @@
             android:backgroundTint="#C8C8C8"
             android:text="@string/bs"
             android:textSize="25sp"
-            app:cornerRadius="15dp"
-
-            android:onClick="backSpaceAction"/>
+            app:cornerRadius="15dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/devide"
@@ -107,9 +101,7 @@
             android:text="@string/devide"
             android:textColor="@color/black"
             android:textSize="25sp"
-            app:cornerRadius="15dp"
-
-            android:onClick="operationAction"/>
+            app:cornerRadius="15dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/seven"
@@ -123,9 +115,7 @@
             android:text="@string/_7"
             android:textColor="@color/black"
             android:textSize="25sp"
-            app:cornerRadius="15dp"
-
-            android:onClick="numberAction"/>
+            app:cornerRadius="15dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/eight"
@@ -139,9 +129,7 @@
             android:text="@string/_8"
             android:textColor="@color/black"
             android:textSize="25sp"
-            app:cornerRadius="15dp"
-
-            android:onClick="numberAction"/>
+            app:cornerRadius="15dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/nine"
@@ -155,9 +143,7 @@
             android:text="@string/_9"
             android:textColor="@color/black"
             android:textSize="25sp"
-            app:cornerRadius="15dp"
-
-            android:onClick="numberAction"/>
+            app:cornerRadius="15dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/multiply"
@@ -171,9 +157,7 @@
             android:text="@string/multiply"
             android:textColor="@color/black"
             android:textSize="25sp"
-            app:cornerRadius="15dp"
-
-            android:onClick="operationAction"/>
+            app:cornerRadius="15dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/four"
@@ -187,9 +171,7 @@
             android:text="@string/_4"
             android:textColor="@color/black"
             android:textSize="25sp"
-            app:cornerRadius="15dp"
-
-            android:onClick="numberAction"/>
+            app:cornerRadius="15dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/five"
@@ -203,9 +185,7 @@
             android:text="@string/_5"
             android:textColor="@color/black"
             android:textSize="25sp"
-            app:cornerRadius="15dp"
-
-            android:onClick="numberAction"/>
+            app:cornerRadius="15dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/six"
@@ -219,9 +199,7 @@
             android:text="@string/_6"
             android:textColor="@color/black"
             android:textSize="25sp"
-            app:cornerRadius="15dp"
-
-            android:onClick="numberAction"/>
+            app:cornerRadius="15dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/minus"
@@ -235,9 +213,7 @@
             android:text="@string/minus"
             android:textColor="@color/black"
             android:textSize="25sp"
-            app:cornerRadius="15dp"
-
-            android:onClick="operationAction"/>
+            app:cornerRadius="15dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/one"
@@ -251,9 +227,7 @@
             android:text="@string/_1"
             android:textColor="@color/black"
             android:textSize="25sp"
-            app:cornerRadius="15dp"
-
-            android:onClick="numberAction"/>
+            app:cornerRadius="15dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/two"
@@ -267,9 +241,7 @@
             android:text="@string/_2"
             android:textColor="@color/black"
             android:textSize="25sp"
-            app:cornerRadius="15dp"
-
-            android:onClick="numberAction"/>
+            app:cornerRadius="15dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/three"
@@ -283,9 +255,7 @@
             android:text="@string/_3"
             android:textColor="@color/black"
             android:textSize="25sp"
-            app:cornerRadius="15dp"
-
-            android:onClick="numberAction"/>
+            app:cornerRadius="15dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/plus"
@@ -299,9 +269,7 @@
             android:text="@string/plus"
             android:textColor="@color/black"
             android:textSize="25sp"
-            app:cornerRadius="15dp"
-
-            android:onClick="operationAction"/>
+            app:cornerRadius="15dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/change"
@@ -329,9 +297,7 @@
             android:text="@string/_0"
             android:textColor="@color/black"
             android:textSize="25sp"
-            app:cornerRadius="15dp"
-
-            android:onClick="numberAction"/>
+            app:cornerRadius="15dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/dot"
@@ -345,9 +311,7 @@
             android:text="@string/dot"
             android:textColor="@color/black"
             android:textSize="25sp"
-            app:cornerRadius="15dp"
-
-            android:onClick="numberAction"/>
+            app:cornerRadius="15dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/equals"
@@ -361,9 +325,7 @@
             android:text="@string/equals"
             android:textColor="@color/black"
             android:textSize="25sp"
-            app:cornerRadius="15dp"
-
-            android:onClick="equalsAction"/>
+            app:cornerRadius="15dp"/>
     </GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
